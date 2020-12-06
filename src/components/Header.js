@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import "./Header.css";
 
 const Header = () => {
   return (
-    <Container>
-      <Navbar bg="dark" variant="dark">
+    <>
+      <Navbar sticky="top" bg="dark" variant="dark">
         <Navbar.Brand>
           <Link className="navigation-link" to="/">
             Home
@@ -25,13 +25,13 @@ const Header = () => {
             </Link>
           </Nav>
           <Nav>
-            <Link to="/signup">
+            <Link to="/sign-up">
               <Button variant="outline-light">Sign Up</Button>
             </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </Container>
+    </>
   );
 };
 
